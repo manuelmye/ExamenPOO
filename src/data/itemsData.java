@@ -1,7 +1,6 @@
 package data;
 
 import items.items;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -19,7 +18,6 @@ public class itemsData {
             PreparedStatement ps = cn.prepareStatement(sql);
             ps.setString(++i, items.getNombre());
             ps.setString(++i, items.getCategoria());
-            ps.setString(++i, items.getFamilia());
             ps.setInt(++i, items.getPrecio());
             int rsId = ps.executeUpdate();
             System.out.println("rsId: " + rsId);
@@ -38,7 +36,6 @@ public class itemsData {
                 items.setId(rs.getInt("id"));
                 items.setNombre(rs.getString("nombre"));
                 items.setCategoria(rs.getString("categoria"));
-                items.setFamilia(rs.getString("familia"));
                 items.setPrecio(rs.getInt("precio"));
                 list.add(items);
             }
@@ -57,7 +54,6 @@ public class itemsData {
                 items.setId(rs.getInt("id"));
                 items.setNombre(rs.getString("nombre"));
                 items.setCategoria(rs.getString("categoria"));
-                items.setFamilia(rs.getString("familia"));
                 items.setPrecio(rs.getInt("precio"));
             }
         } catch (Exception e) {
@@ -69,7 +65,6 @@ public class itemsData {
         String sql = " UPDATE items SET " +
                 "nombre = ?, " +
                 "categoria = ?, " +
-                "familia = ?, " +
                 "precio = ? " +
                 "WHERE id = ? ";
         int i = 0;
@@ -77,7 +72,6 @@ public class itemsData {
             PreparedStatement ps = cn.prepareStatement(sql);
             ps.setString(++i, items.getNombre());
             ps.setString(++i, items.getCategoria());
-            ps.setString(++i, items.getFamilia());
             ps.setInt(++i, items.getPrecio());
             ps.setInt(++i, items.getId());
             int rsId = ps.executeUpdate();
