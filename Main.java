@@ -67,7 +67,7 @@ public class Main {
                         }
                         itemsData.update(items2);
                     } else {
-                        System.out.println("Not results");
+                        System.out.println("Not result");
                     }
                     break;
                 case 5:
