@@ -19,7 +19,7 @@ public class Main {
             switch (option) {
                 case 1:
                     for (Items items: itemsData.list()) {
-                        System.out.println(items.getId() + "\t" + items.getNombre() + "\t" + items.getCategoria() + "\t" + items.getFamilia() + "\t" + items.getPrecio());
+                        System.out.println(items.getId() + "\t" + items.getNombre() + "\t" + items.getCategoria() + "\t" + items.getPrecio());
                     }
                     System.out.println("");
                     break;
@@ -43,7 +43,7 @@ public class Main {
                     System.out.print("Enter the id: ");
                     int id = sc.nextInt();
                     Items items1 = itemsData.get(id);
-                    System.out.println(items1.getId() + "\t" + items1.getNombre() + "\t" + items1.getCategoria() + "\t" + items1.getFamilia() + "\t" + items1.getPrecio());
+                    System.out.println(items1.getId() + "\t" + items1.getNombre() + "\t" + items1.getCategoria() + "\t" + items1.getPrecio());
                     sc.nextLine();
                     break;
                 case 4:
